@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Mother's Scream: Save my children</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 10px rgba(220, 38, 38, 0);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+            }
+        }
+        
+        .progress-bar {
+            height: 10px;
+            border-radius: 5px;
+            background-color: #e5e7eb;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background-color: #ef4444;
+            transition: width 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Hero Section with Image -->
+    <div class="hero-image flex items-center justify-center text-white relative">
+        <div class="absolute top-4 right-4">
+            <span class="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">URGENT</span>
+        </div>
+        <div class="text-center px-4 md:px-8 max-w-4xl">
+            <h1 class="text-3xl md:text-5xl font-bold mb-6 drop-shadow-lg">A Mother's Scream: Save my children</h1>
+            <p class="text-xl md:text-2xl mb-8 drop-shadow-md">Please... I'm begging you to help save my children</p>
+            <button id="donateBtn" class="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl pulse focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition-all duration-300">
+                <i class="fas fa-heart mr-2"></i> Make a Donation
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-12 max-w-4xl">
+        <!-- Story Section -->
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-12">
+            <div class="flex items-center mb-6">
+                <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mr-4">
+                    <i class="fas fa-user text-red-600 text-2xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800">Yasmin's Story</h2>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-6 mb-6">
+                <div class="md:w-1/3">
+                    <img src="https://images.unsplash.com/photo-1573497491765-dccce02b29df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Mother and children" 
+                         class="w-full h-48 object-cover rounded-lg shadow-md">
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-gray-700 text-lg leading-relaxed">
+                        <i class="fas fa-quote-left text-red-200 text-2xl mr-2 align-middle"></i>
+                        My heart breaks every time I look into my children's hungry eyes. Sami, my 5-year-old, cries himself to sleep from stomach pains. Bassil, just 3, is so weak he can barely stand. My husband hasn't heard our voices in months since the bombs took his hearing. I feel so alone in this nightmare. Please, I'm on my knees begging you - help us survive!
+                        <i class="fas fa-quote-right text-red-200 text-2xl ml-2 align-middle"></i>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+                <div class="bg-red-50 p-4 rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Empty plate" 
+                         class="w-full h-32 object-cover rounded-lg mb-3">
+                    <div class="flex items-center mb-2">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-utensils text-red-600"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800">Food Crisis</h3>
+                    </div>
+                    <p class="text-gray-700 text-sm">Yesterday Sami asked me "Mama, will we eat today?" and I had to lie to him. The hunger pains keep them awake crying all night. I can see their little ribs through their skin...</p>
+                </div>
+                
+                <div class="bg-red-50 p-4 rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Medical equipment" 
+                         class="w-full h-32 object-cover rounded-lg mb-3">
+                    <div class="flex items-center mb-2">
+                        <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                            <i class="fas fa-procedures text-red-600"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800">Medical Needs</h3>
+                    </div>
+                    <p class="text-gray-700 text-sm">My husband can't hear our children crying anymore. He can't work. He just sits staring at the wall, broken. The hearing aids would give him back his life - and maybe his will to live.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="bg-red-600 rounded-lg shadow-md p-8 text-center text-white mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">You Could Save Their Lives Today</h2>
+            <p class="mb-6 text-lg">Every dollar you give means one more meal, one more day of medicine, one more night my babies won't cry from hunger. I'm begging you - please don't let my children starve.</p>
+            <button id="donateBtn2" class="bg-white hover:bg-gray-100 text-red-600 font-bold py-4 px-8 rounded-full text-lg md:text-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 transition-all duration-300">
+                <i class="fas fa-hand-holding-heart mr-2"></i> Donate Now
+            </button>
+        </div>
+
+        <!-- Family Story Gallery -->
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8 mb-12">
+            <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">Their Story in Pictures</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Gallery Item 1 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Yasmin with her children" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-gray-800 mb-3">Our Daily Struggle</h3>
+                        <p class="text-gray-700">This was our "meal" yesterday - a piece of bread divided four ways. Sami tried to give his share to Bassil, saying "I'm not hungry mama" but I saw his stomach growling. My heart shattered.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1607962837359-5e7e89f86776?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Yasmin's husband" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-gray-800 mb-3">My Husband's Condition</h3>
+                        <p class="text-gray-700">This is what's left of my husband - a shell of the man who used to sing our children to sleep. He can't hear their laughter anymore. Sometimes I catch him crying silently in the dark.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1540479859555-17af45c78602?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Children sleeping" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-gray-800 mb-3">Where They Sleep</h3>
+                        <p class="text-gray-700">This is where my babies sleep - on a dirty floor with no blankets. Last winter Bassil got so cold his lips turned blue. I held him all night, breathing warmth onto his tiny body.</p>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="bg-gray-50 rounded-lg overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Medical needs" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="font-bold text-lg text-gray-800 mb-3">Medical Needs</h3>
+                        <p class="text-gray-700">Bassil's asthma attacks terrify me. Last week he turned purple gasping for air while I screamed for help. The medicine costs more than we can afford. I stay awake every night listening to his labored breathing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl font-bold mb-2">Help Yasmin's Family</h3>
+                    <p class="text-gray-400 text-sm">Your kindness could mean my children live to see tomorrow</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-red-600 transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-red-600 transition-colors">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-red-600 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-gray-400 text-sm">
+                <p>© 2023 Help Yasmin's Family. All donations go directly to support the family.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Facebook Pixel Tracking -->
+    <script>
+        // Replace with your actual Facebook Pixel ID
+        const facebookPixelId = 'YOUR_PIXEL_ID_HERE';
+        
+        // Function to track button clicks
+        function trackFacebookEvent(eventName) {
+            if (typeof fbq !== 'undefined') {
+                fbq('track', eventName);
+            } else {
+                console.log('Facebook Pixel event:', eventName);
+                // You can add fallback tracking here if needed
+            }
+        }
+        
+        // Initialize Facebook Pixel
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', facebookPixelId);
+        fbq('track', 'PageView');
+        
+        // Add event listeners to donation buttons
+        document.getElementById('donateBtn').addEventListener('click', function() {
+            trackFacebookEvent('Lead');
+            // Here you would normally redirect to payment page
+            alert('Redirecting to donation page... (Facebook Pixel Lead event tracked)');
+        });
+        
+        document.getElementById('donateBtn2').addEventListener('click', function() {
+            trackFacebookEvent('Lead');
+            // Here you would normally redirect to payment page
+            alert('Redirecting to donation page... (Facebook Pixel Lead event tracked)');
+        });
+    </script>
+    
+    <!-- NoScript fallback for Facebook Pixel -->
+    <noscript>
+        <img height="1" width="1" style="display:none" 
+             src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"/>
+    </noscript>
+</body>
+</html>
