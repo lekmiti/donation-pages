@@ -57,7 +57,7 @@
             <h1 class="text-3xl md:text-5xl font-bold mb-6 drop-shadow-lg">A Mother's Scream: Save my children</h1>
             <p class="text-xl md:text-2xl mb-8 drop-shadow-md">Please... I'm begging you to help save my children</p>
             <button id="donateBtn" class="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full text-lg md:text-xl pulse focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50 transition-all duration-300">
-                <i class="fas fa-heart mr-2"></i> Make a Donation
+                <a href="https://shorturl.at/6TMcQ"><i class="fas fa-heart mr-2"></i> Make a Donation</a>
             </button>
         </div>
     </div>
@@ -197,51 +197,6 @@
         </div>
     </footer>
     
-    <!-- Facebook Pixel Tracking -->
-    <script>
-        // Replace with your actual Facebook Pixel ID
-        const facebookPixelId = 'YOUR_PIXEL_ID_HERE';
-        
-        // Function to track button clicks
-        function trackFacebookEvent(eventName) {
-            if (typeof fbq !== 'undefined') {
-                fbq('track', eventName);
-            } else {
-                console.log('Facebook Pixel event:', eventName);
-                // You can add fallback tracking here if needed
-            }
-        }
-        
-        // Initialize Facebook Pixel
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', facebookPixelId);
-        fbq('track', 'PageView');
-        
-        // Add event listeners to donation buttons
-        document.getElementById('donateBtn').addEventListener('click', function() {
-            trackFacebookEvent('Lead');
-            // Here you would normally redirect to payment page
-            alert('Redirecting to donation page... (Facebook Pixel Lead event tracked)');
-        });
-        
-        document.getElementById('donateBtn2').addEventListener('click', function() {
-            trackFacebookEvent('Lead');
-            // Here you would normally redirect to payment page
-            alert('Redirecting to donation page... (Facebook Pixel Lead event tracked)');
-        });
-    </script>
     
-    <!-- NoScript fallback for Facebook Pixel -->
-    <noscript>
-        <img height="1" width="1" style="display:none" 
-             src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID_HERE&ev=PageView&noscript=1"/>
-    </noscript>
 </body>
 </html>
